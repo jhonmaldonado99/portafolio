@@ -16,6 +16,7 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
@@ -275,17 +276,17 @@
                 </div>
                 <div class="contacto-grid">
                     <div class="contacto-grid-item">
-                        <form action="#">
+                        <form class="needs-validation" novalidate>
                             <div class="form-section">
-                                <input type="text" name="nombre" placeholder="Tu nombre">
+                                <input type="text" name="nombre" id="form-nombre" placeholder="Tu nombre">
                             </div>
                             <div class="form-section">
-                                <input type="email" name="email" placeholder="Tu email">
+                                <input type="email" name="email" id="form-email" placeholder="Tu email">
                             </div>
                             <div class="form-section">
-                                <textarea name="mensaje" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                                <textarea name="mensaje" cols="30" id="form-mensaje" rows="5" placeholder="Mensaje"></textarea>
                             </div>
-                            <input type="submit" class="btn">
+                            <input type="submit" class="btn enviarmensaje">
                         </form>
                     </div>
                     <div class="contacto-grid-item ods">
