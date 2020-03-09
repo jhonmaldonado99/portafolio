@@ -574,6 +574,11 @@ ul.sub-menu-list .sub-menu-item {
     padding: 3px 10px 15px 10px;
 }
 
+footer p a,
+.red-social a {
+    color: inherit;
+}
+
 .redes-sociales {
     display: flex;
     overflow: hidden;
@@ -594,10 +599,6 @@ ul.sub-menu-list .sub-menu-item {
     color: #eb64eb;
     font-size: 2.1rem;
     box-sizing: border-box;
-}
-
-footer p a {
-    color: inherit;
 }
 
 footer p a:hover {
