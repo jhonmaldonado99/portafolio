@@ -11,6 +11,7 @@ html {
     font-size: 10px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -219,11 +220,15 @@ nav {
     font-size: 1.4rem;
 }
 
-.servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2.5rem;
+.d-flex {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.d-flex-item {
+    width: 99%;
 }
 
 .servicios-grid-item {
@@ -234,6 +239,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 15px;
     cursor: pointer;
     z-index: 1;
 }
@@ -326,27 +332,18 @@ nav {
 
 /* Begin webs */
 
-.web-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2.5rem;
-    margin-bottom: 2rem;
+.ventajas-item {
+    text-align: center;
+    margin-bottom: 2rem!important;
 }
 
-.web-grid-item {
+.ventajas-item h3 {
+    font-size: 2rem;
+    padding: 2rem 0;
     text-align: center;
 }
 
-.web-grid-item img {
-    width: 30%;
-}
-
-.web-grid-item h3 {
-    font-size: 2rem;
-    padding: 2rem 0;
-}
-
-.web-grid-item p {
+.ventajas-item p {
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -606,11 +603,76 @@ footer p a:hover {
 }
 
 
+/* titulos */
+
+.bola {
+    position: relative;
+}
+
+.bola::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/cuadrado.png);
+    opacity: 0.8;
+    background-size: cover;
+    top: -80px;
+    right: -60px;
+    transform: rotate(20deg);
+}
+
+
+/* rueda */
+
+.icono {
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    background: linear-gradient(135deg, rgba(70, 54, 151, 0.9) 0%, rgba(135, 114, 216, .8)100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono img {
+    width: 90px;
+    height: 90px;
+}
+
+.rueda {
+    transition: all .5s ease-in-out;
+}
+
+.rueda:hover {
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+
+/**/
+
+.girar {
+    transition: all .5s ease-in-out;
+}
+
+.girar:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+
 /* Media queries */
 
 @media screen and (min-width: 350px) {
     .mensaje-principal {
         transform: translateY(40%);
+    }
+    .d-flex-item {
+        width: 90%;
     }
 }
 
@@ -627,6 +689,16 @@ footer p a:hover {
         height: 9.4rem;
         background: url("../images/wave-medium-reversed.png");
         background-size: cover;
+    }
+    .d-flex-item {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .d-flex-item {
+        width: 47%;
+        margin: 10px;
     }
 }
 
@@ -692,6 +764,13 @@ footer p a:hover {
     }
     ul.sub-menu-list {
         flex-direction: row;
+    }
+    .d-flex {
+        justify-content: space-between;
+    }
+    .d-flex-item {
+        width: 31%;
+        margin: 0;
     }
 }
 
